@@ -18,3 +18,4 @@ A. This example is of Spring boot aplication -
 ###Note
 5. In your main service method - suppose intracts with service1 which is live and also there is another fallback method 
   where you specify the service2, so when service1 is down then service2 will act like fallback and circuit will trip which is taken care by hystrix.
+You can check out both project service-greeting and service-hello-world and you can test service-greeting using service name as greet in url- and it should point to your current greet service as live. once your service service-hello-world is down then the greet service will use circuit breaker (trip) and let your service direct to fallback.
